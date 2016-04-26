@@ -6,8 +6,8 @@
 		<td><img src="https://pbs.twimg.com/profile_images/378800000126010833/ccaf376e5be885a124f13c5cdb1907ca.png" alt="Player 2 Icon"></td>
 	</tr>
 	<tr>
-		<td><%= @player1 %> HP : 100</td>
-		<td><%= @player2 %> HP : 100</td>
+		<td><%= @player1 %> HP : <%= @player1_hp %></td>
+		<td><%= @player2 %> HP : <%= @player2_hp %></td>
 	</tr>
   <tr>
     <td><form action="/attack" method="get">
