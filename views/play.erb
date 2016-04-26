@@ -9,4 +9,10 @@
 		<td><%= @player1 %> HP : 100</td>
 		<td><%= @player2 %> HP : 100</td>
 	</tr>
+  <tr>
+    <td><form action="/attack" method="get">
+    <input type= "submit" value= "Attack <%= @player2 %>"></form></td>
+    <td><form action="/attack" method="get">
+    <input type= "submit" value= "Attack <%= @player1 %>"></form></td>
+  </tr>
 </table>
