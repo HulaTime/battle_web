@@ -17,11 +17,18 @@ describe Game do
 	end
 
 	describe '#attack' do
-    it 'attacks the opponent' do
-      expect(game.player_2).to receive(:reduce)
-      game.attack(game.player_2)
-    end
-  end
+    	it 'attacks the opponent' do
+      		expect(game.player_2).to receive(:reduce)
+      		game.attack(game.player_2)
+    	end
+  	end
+
+  	describe'#switch player' do 
+  		it 'switches player' do 
+  			game.switch
+  			expect(game.current_player).to eq player_2
+  		end
+  	end
 
 
 
