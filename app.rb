@@ -15,6 +15,10 @@ class Battle < Sinatra::Base
     redirect '/play'
   end
 
+  get '/death' do
+    erb(:death)
+  end
+
   get '/play' do
     @game = $game
     erb :play
@@ -23,6 +27,9 @@ class Battle < Sinatra::Base
   get '/attack' do
     @game = $game
     @game.attack(@game.not_current_player)
+    if @game.game_over?
+      redirect '/death'
+    end
     @game.switch
     erb :attack
   end

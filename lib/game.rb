@@ -25,4 +25,15 @@ class Game
  		@current_player = (@players.select{|p| p if p != @current_player}).first
  	end
 
+ 	def game_over?
+ 		player_dead?
+ 	end
+
+ 	private
+
+ 	def player_dead?
+ 		player_1.hit_points <= 0 || player_2.hit_points <=0
+ 	end
+
+
 end

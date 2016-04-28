@@ -9,3 +9,8 @@ def switch_turns
 	click_button 'Attack'
 	click_button 'switch turns'
 end
+
+def attack_to_death
+  10.times { switch_turns }
+  click_button 'Attack'
+end
