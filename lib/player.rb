@@ -1,8 +1,8 @@
 class Player
 
   DEFAULT_HIT_POINTS = 60
-  DEFAULT_ATTACK_VAL = 10
-  #DEATH_VALUE = 0
+  MIN_ATTACK_VAL = 1
+  MAX_ATTACK_VAL = 10
 
   attr_reader :name, :hit_points
 
@@ -12,7 +12,13 @@ class Player
   end
 
   def reduce
-      @hit_points -= DEFAULT_ATTACK_VAL
+      @hit_points -= random_attack
+  end
+
+  private
+
+  def random_attack
+    Kernel.rand(MIN_ATTACK_VAL..MAX_ATTACK_VAL)
   end
 
 

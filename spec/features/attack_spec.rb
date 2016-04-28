@@ -6,6 +6,7 @@ feature "attack" do
   end
 
   scenario "and reduce Player 2 HP by 10" do
+    allow(Kernel).to receive(:rand) {10}
     sign_in_and_play
     click_button 'Attack'
     expect(page).to have_content 'Mittens: 50HP'
