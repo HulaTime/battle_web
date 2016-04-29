@@ -5,6 +5,8 @@
     <h1>Battle will begin shortly, enter thy name</h1>
 
     <form action="/names" method="post">
+      <p><input type="radio" name="gametype" value="true" id="twoplay">I have friends!</p>
+      <p><input type="radio" name="gametype" value="false" id="oneplay">Single player</p>
       <p>Battle-cat 1: <input type="text" name="player_1_name"></p>
       <p>Battle-cat 2: <input type="text" name="player_2_name"></p>
       <input type="submit" value="Huzzah mothafucka!">

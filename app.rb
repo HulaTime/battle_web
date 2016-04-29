@@ -14,7 +14,14 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    @game = Game.create Fighter.new(params[:player_1_name]), Fighter.new(params[:player_2_name])
+    # if params[:gametype] == "false"
+    #   player_2 = Fighter.new("Robot")
+    #   player_1 = Fighter.new(params[:player_1_name])
+    # else
+      player_1 = Fighter.new(params[:player_1_name])
+      player_2 = Fighter.new(params[:player_2_name])
+    # end
+    Game.create player_1, player_2, params[:gametype]
     redirect '/play'
   end
 
